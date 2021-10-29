@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+  place-items: center;
+
+  h1 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+}
+
+.userInfo {
+  display: flex;
+  place-items: center;
+  grid-gap: 2rem;
+  margin: 2rem 0;
+
+  img {
+    width: 10rem;
+  }
+
+  p {
+    text-justify: left;
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+  span {
+    font-weight: 500;
+  }
+}
