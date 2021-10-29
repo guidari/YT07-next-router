@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
+import Router from "next/router";
 import styles from "../styles/Home.module.scss";
-import Link from "next/link";
 
 const Home: NextPage = () => {
   const name = "John Doe";
@@ -8,11 +8,23 @@ const Home: NextPage = () => {
   const job = "Software Engineer";
   const company = "Google";
 
+  function sendProps() {
+    Router.push({
+      pathname: "/userProfile",
+      query: {
+        name,
+        age,
+        job,
+        company,
+      },
+    });
+  }
+
   return (
     <div className={styles.main}>
       <h1>How to use Next Router?</h1>
 
-      <Link href="/userProfile">Send Props</Link>
+      <a onClick={() => sendProps()}>Send props</a>
     </div>
   );
 };
